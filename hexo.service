@@ -1,0 +1,15 @@
+[Unit]
+Description=hexo service
+After=network.target
+
+[Service]
+Type=idle
+#User=root
+DynamicUser=yes
+Restart=on-failure
+RestartSec=60s
+WorkingDirectory=/root/hexo
+ExecStart=/root/.nvm/versions/node/v20.17.0/bin/hexo clean && /root/.nvm/versions/node/v20.17.0/bin/hexo g && /root/.nvm/versions/node/v20.17.0/bin/hexo s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+options:
+  lineNumbers: true
+  imagePath: /assets/images
+editor:
+  lineNumbers: true
